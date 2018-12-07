@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon slot="icon-only" name="contact"></ion-icon>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="home-hello">
+  		<img src="http://lorempixel.com/g/640/480/technics" />
+  		<div class="hello-title" text-wrap>
+  			<h1>Dashboard</h1>
+  			50 Market Street, San Francisco, California 94103, United States
+  		</div>
+  </div>
+  <div padding-horizontal>
+			<button ion-button full (click) ="logout()">Sign Out {{user?.email}}</button>
+</div>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>

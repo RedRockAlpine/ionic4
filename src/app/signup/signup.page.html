@@ -1,0 +1,35 @@
+<ion-content>
+	<ion-grid>
+  	<ion-row justify-content-center>
+  		<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div padding-horizontal>
+
+          <form (ngSubmit)="signup()" [formGroup]="form">
+        		<ion-list inset>
+
+        			<ion-item>
+        				<ion-input required type="text" placeholder="Your Sign-up Email" formControlName="email"></ion-input>
+        			</ion-item>
+
+        			<ion-item>
+        				<ion-input required type="password" placeholder="Choose a Password" formControlName="password"></ion-input>
+        			</ion-item>
+
+        		</ion-list>
+
+        		<div class="form-error">{{signupError}}</div>
+        		<ion-button size="medium" expand="block" type="submit" type="submit" [disabled]="!form.valid">Create Account</ion-button>
+        	</form>
+
+          <div padding-vertical>
+						<div class="login-footer">
+							<p>
+								<a routerLink="/login">I already have an account.</a>
+							</p>
+						</div>
+					</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

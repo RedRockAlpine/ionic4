@@ -1,0 +1,42 @@
+<ion-content>
+	<ion-grid>
+  	<ion-row justify-content-center>
+  		<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+				<div padding-horizontal>
+					<form (ngSubmit)="login()" [formGroup]="loginForm">
+
+						<ion-list inset>
+							<ion-item>
+								<ion-input required type="text" placeholder="Email" formControlName="email"></ion-input>
+							</ion-item>
+							<ion-item>
+								<ion-input required type="password" placeholder="Password" formControlName="password"></ion-input>
+							</ion-item>
+						</ion-list>
+
+						<div class="form-error">{{loginError}}</div>
+
+						<ion-button size="medium" expand="block" type="submit" [disabled]="!loginForm.valid" (click)="login()">Log in</ion-button>
+
+					</form>
+					<div padding-vertical>
+						<ion-button icon-left color="secondary" size="medium" expand="block" clear (click)="loginWithGoogle()">
+							<ion-icon name="logo-google"></ion-icon>
+							Log in with Google
+						</ion-button>
+
+						<ion-button icon-left color="secondary" size="medium" expand="block" clear (click)="signup()">
+							<ion-icon name="person-add"></ion-icon>
+							Create new Account
+						</ion-button>
+						<div class="login-footer">
+							<p>
+								<a href="#">Forgot password?</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
